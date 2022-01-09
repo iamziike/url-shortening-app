@@ -1,0 +1,47 @@
+.url-result {
+  --url-result-size: 0.8rem;
+  display: flex;
+  background-color: var(--main-3-color);
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+  padding: 10px 15px;
+  font-size: var(--url-result-size);
+}
+
+.url-result > *:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.url-result button {
+  font-size: inherit;
+}
+
+.button--copied {
+  background-color: var(--main-2-color);
+}
+
+.shortend-url {
+  color: var(--main-4-color);
+}
+
+@media (max-width: 700px) {
+  .url-result {
+    flex-direction: column;
+    position: relative;
+    gap: 0px;
+  }
+
+  .url-result > *:nth-child(1) {
+    width: 100%;
+    align-items: center;
+  }
+
+  .url-result > *:nth-child(2) {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

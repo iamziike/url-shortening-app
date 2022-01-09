@@ -1,0 +1,139 @@
+.main {
+  --header-text: 2rem;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+.main > * {
+  position: relative;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: var(--gray);
+}
+
+.statistics {
+  position: relative;
+  margin-top: 100px;
+}
+
+.statistics .header-text {
+  color: var(--main-2-color);
+}
+
+.statistics > .header-text {
+  font-size: var(--header-text);
+}
+
+.statistics > .header-text,
+.statistics > p {
+  text-align: center;
+}
+
+.statistics p {
+  line-height: 150%;
+}
+
+.statistics > p {
+  width: 40ch;
+  margin: 10px auto;
+}
+
+.stats-list {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.stats-list::before {
+  content: '';
+  --height: 8px;
+  position: absolute;
+  width: 100%;
+  height: var(--height);
+  top: calc(50% - var(--height));
+  background-color: var(--main-4-color);
+}
+
+.stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--main-3-color);
+  padding: 20px 30px;
+  padding-top: 70px;
+  position: relative;
+  overflow: visible;
+}
+
+.stat:nth-child(2) {
+  top: 40px;
+}
+
+.stat:nth-child(3) {
+  top: 80px;
+}
+
+.image-header {
+  --width: 80px;
+  --height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(0px - var(--width) / 2);
+  background-color: var(--main-2-color);
+  border-radius: 50%;
+  overflow: hidden;
+  width: var(--width);
+  height: var(--height);
+}
+
+@media (max-width: 1170px) {
+  .stats-list {
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .stats-list::before {
+    width: var(--height);
+    height: 100%;
+    top: 0;
+    left: calc(50% - var(--height));
+  }
+}
+
+@media (max-width: 700px) {
+  .statistics > p {
+    width: 100%;
+  }
+
+  .stats-list {
+    width: 100%;
+  }
+
+  .stat {
+    margin: 0 auto;
+  }
+
+  .stat p {
+    width: 30ch;
+  }
+}
+
+@media (max-width: 500px) {
+  .stat p {
+    width: 100%;
+  }
+}

@@ -1,0 +1,100 @@
+.creator {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 30px;
+  background: url('https://res.cloudinary.com/dnagee/image/upload/v1641599522/shortly/bg-boost-desktop_abmyev.svg')
+    var(--main-2-color);
+  background-size: cover;
+  padding: 50px;
+}
+
+.input-field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-field-wrapper::before {
+  content: 'Please add a link';
+  position: absolute;
+  color: var(--red);
+  left: 0;
+  width: 100%;
+  font-size: 0.6rem;
+  top: 0;
+  transition: top 0.2s;
+}
+
+.input-field-wrapper--empty::before {
+  top: 110%;
+}
+
+.input-field {
+  position: relative;
+  width: 100%;
+  color: var(--main-2-color);
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-radius: 5px;
+}
+
+.input-value--empty {
+  outline: solid 2px var(--red);
+}
+
+.creator button {
+  white-space: nowrap;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--very-dark-blue);
+  z-index: 100;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
+  background-color: var(--red);
+  animation: loading ease-in 1.5s infinite alternate both;
+}
+
+@keyframes loading {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 95%;
+  }
+}
+
+.fetch-error {
+  position: absolute;
+  bottom: 110%;
+  width: 100%;
+  color: var(--red);
+  text-align: center;
+  height: max-content;
+}
+
+@media (max-width: 1070px) {
+  .creator {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .creator button {
+    width: 100%;
+  }
+}

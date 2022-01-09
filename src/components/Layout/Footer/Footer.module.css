@@ -1,0 +1,149 @@
+.footer {
+  /* theme */
+  --main-1-color: var(--grayish-violet);
+  --main-2-color: var(--very-dark-blue);
+  --main-3-color: var(--white);
+  --main-4-color: var(--cyan);
+  --main-5-color: var(--very-dark-violet);
+}
+
+.footer {
+  --billboard-header-font-size: 2rem;
+  background-color: var(--main-5-color);
+  color: var(--main-3-color);
+}
+
+.billboard,
+.tab-bar {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.billboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  background: url('https://res.cloudinary.com/dnagee/image/upload/v1641599522/shortly/bg-boost-desktop_abmyev.svg')
+    var(--main-2-color) no-repeat;
+  background-size: cover;
+}
+
+.billboard h2 {
+  font-size: var(--billboard-header-font-size);
+}
+
+.tab-bar {
+  display: grid;
+  grid-template-columns: 0.3fr 2fr 0.3fr;
+}
+
+.sitemap {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.sitemap ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 300;
+  font-size: 90%;
+}
+
+.sitemap li {
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+.sitemap li:hover {
+  color: var(--main-4-color);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials > * {
+  cursor: pointer;
+}
+
+.socials > * path {
+  transition: fill 0.3s;
+}
+
+.socials > *:hover path {
+  fill: var(--main-4-color);
+}
+
+@media (max-width: 1200px) {
+  .tab-bar {
+    grid-template-columns: none;
+    grid-template-areas:
+      'logoWrapper sitemap'
+      'socials sitemap';
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    grid-area: logoWrapper;
+  }
+
+  .sitemap {
+    grid-area: sitemap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: max-content;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .socials {
+    grid-area: socials;
+  }
+}
+
+@media (max-width: 700px) {
+  .tab-bar {
+    grid-template-areas:
+      'sitemap sitemap'
+      'logoWrapper socials';
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .sitemap {
+    width: 100%;
+  }
+
+  .socials {
+    justify-content: end;
+  }
+}
+
+@media (max-width: 500px) {
+  .billboard h2 {
+    text-align: center;
+  }
+
+  .sitemap {
+    flex-direction: column;
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .tab-bar {
+    grid-template-areas:
+      'sitemap'
+      'logoWrapper'
+      'socials';
+    justify-content: center;
+  }
+}
