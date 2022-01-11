@@ -83,21 +83,19 @@
   .links-wrapper {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 120%;
     margin-left: 0;
     background-color: var(--very-dark-violet);
     gap: 20px;
     padding: 40px 20px;
     border-radius: 10px;
-    transform: scale(0);
-    transform-origin: top right;
-    transition: transform 0.5s;
     flex-direction: column;
+    transition: left 0.5s cubic-bezier(1, 1.28, 0, 1.16);
   }
 
   .links-wrapper--open {
     display: flex;
-    transform: scale(1);
+    left: 0%;
   }
 
   .links,
