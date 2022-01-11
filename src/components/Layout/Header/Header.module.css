@@ -16,7 +16,7 @@
 
 .text-content h1 {
   font-size: var(--hero-text);
-  color: var(--main-2-color);
+  color: var(--color-variant2);
 }
 
 .text-content p {

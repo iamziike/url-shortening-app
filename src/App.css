@@ -1,17 +1,5 @@
 @import './styles/reset.css';
 @import './styles/variables.css';
+@import './styles/themes.css';
 @import './styles/utilities.css';
-
-*::selection {
-  background-color: var(--very-dark-blue);
-  color: var(--white);
-}
-
-body {
-  background-color: var(--main-3-color);
-  font-family: var(--default-font), sans-serif;
-  font-size: var(--default-font-size);
-  font-weight: 500;
-  color: var(--main-1-color);
-  overflow-x: hidden;
-}
+@import './styles/base.css';

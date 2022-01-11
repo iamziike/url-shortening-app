@@ -1,0 +1,30 @@
+.bulb {
+  display: grid;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  right: var(--padding-horizontal);
+  font-size: 2rem;
+  height: var(--padding-vertical);
+  z-index: 100;
+}
+
+.bulb * {
+  cursor: pointer;
+  height: 70%;
+  fill: var(--color-variant2);
+}
+
+@media (max-width: 700px) {
+  .bulb {
+    justify-content: center;
+    right: 0;
+  }
+
+  .bulb * {
+    cursor: pointer;
+    height: 100%;
+    fill: var(--color-variant2);
+  }
+}

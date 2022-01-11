@@ -1,0 +1,19 @@
+*::selection {
+  background-color: var(--bg2);
+  color: var(--color-variant1);
+}
+
+*,
+*::before,
+*::after {
+  transition: background-color 1s, color 1s;
+}
+
+.theme {
+  font-family: var(--default-font), sans-serif;
+  font-size: var(--default-font-size);
+  font-weight: 500;
+  overflow-x: hidden;
+  color: var(--text-color);
+  background-color: var(--bg1);
+}

@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Layout/Header/Header';
 import Main from './components/Layout/Main/Main';
 import Footer from './components/Layout/Footer/Footer';
+import { useState } from 'react';
+import Bulb from './components/Bulb/Bulb';
 
 const statistics = {
   statsList: [
@@ -32,13 +34,22 @@ const statistics = {
     'Track how your links are performing across the web with our advanced statistics dashboard.',
 };
 
+const themeClassName = ['light-mode', 'dark-mode'];
+
 const App = () => {
+  const [themeIndex, setThemeIndex] = useState(0);
+
+  const toggleThemeHandler = () => {
+    setThemeIndex((prev) => (!prev ? prev + 1 : 0));
+  };
+
   return (
-    <>
+    <div className={`theme ${themeClassName[themeIndex]}`}>
+      <Bulb onToggleTheme={toggleThemeHandler} />
       <Header className='default-padding' />
       <Main className='default-padding' data={statistics} />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -15,7 +15,7 @@
   width: 100%;
   left: 0;
   height: 100%;
-  background-color: var(--gray);
+  background-color: var(--comp-main-bg);
 }
 
 .statistics {
@@ -24,7 +24,7 @@
 }
 
 .statistics .header-text {
-  color: var(--main-2-color);
+  color: var(--color-variant2);
 }
 
 .statistics > .header-text {
@@ -59,7 +59,7 @@
   width: 100%;
   height: var(--height);
   top: calc(50% - var(--height));
-  background-color: var(--main-4-color);
+  background-color: var(--cyan);
 }
 
 .stat {
@@ -67,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: var(--main-3-color);
+  background: var(--bg1);
   padding: 20px 30px;
   padding-top: 70px;
   position: relative;
@@ -90,11 +90,11 @@
   justify-content: center;
   position: absolute;
   top: calc(0px - var(--width) / 2);
-  background-color: var(--main-2-color);
   border-radius: 50%;
   overflow: hidden;
   width: var(--width);
   height: var(--height);
+  background-color: inherit;
 }
 
 @media (max-width: 1170px) {

@@ -1,16 +1,7 @@
 .footer {
-  /* theme */
-  --main-1-color: var(--grayish-violet);
-  --main-2-color: var(--very-dark-blue);
-  --main-3-color: var(--white);
-  --main-4-color: var(--cyan);
-  --main-5-color: var(--very-dark-violet);
-}
-
-.footer {
   --billboard-header-font-size: 2rem;
-  background-color: var(--main-5-color);
-  color: var(--main-3-color);
+  background-color: var(--comp-footer-bg);
+  color: var(--white);
 }
 
 .billboard,
@@ -27,7 +18,7 @@
   gap: 20px;
   position: relative;
   background: url('https://res.cloudinary.com/dnagee/image/upload/v1641599522/shortly/bg-boost-desktop_abmyev.svg')
-    var(--main-2-color) no-repeat;
+    var(--comp-billboard-bg) no-repeat;
   background-size: cover;
 }
 
@@ -60,7 +51,7 @@
 }
 
 .sitemap li:hover {
-  color: var(--main-4-color);
+  color: var(--cyan);
 }
 
 .socials {
@@ -77,7 +68,7 @@
 }
 
 .socials > *:hover path {
-  fill: var(--main-4-color);
+  fill: var(--cyan);
 }
 
 @media (max-width: 1200px) {

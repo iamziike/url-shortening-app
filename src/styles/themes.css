@@ -1,0 +1,31 @@
+.light-mode {
+  /* light theme colors */
+  --text-color: var(--grayish-violet);
+  --color-variant1: var(--white);
+  --color-variant2: var(--very-dark-blue);
+  --color-variant3: var(--very-dark-violet);
+
+  --bg1: var(--white);
+  --bg2: var(--very-dark-violet);
+
+  /* components bg */
+  --comp-main-bg: var(--gray);
+  --comp-footer-bg: var(--very-dark-blue);
+  --comp-billboard-bg: var(--very-dark-violet);
+}
+
+.dark-mode {
+  /* dark theme colors */
+  --text-color: var(--pale-white);
+  --color-variant1: var(--very-dark-blue);
+  --color-variant2: var(--white);
+  --color-variant3: var(--pale-white);
+
+  --bg1: var(--very-dark-blue);
+  --bg2: var(--white);
+
+  /* components bg */
+  --comp-main-bg: var(--very-dark-violet);
+  --comp-footer-bg: var(--very-dark-violet);
+  --comp-billboard-bg: var(--very-dark-blue);
+}

@@ -1,7 +1,7 @@
 .url-result {
   --url-result-size: 0.8rem;
   display: flex;
-  background-color: var(--main-3-color);
+  background-color: var(--bg1);
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -21,11 +21,12 @@
 }
 
 .button--copied {
-  background-color: var(--main-2-color);
+  background-color: var(--bg2);
+  color: var(--color-variant1);
 }
 
 .shortend-url {
-  color: var(--main-4-color);
+  color: var(--cyan);
 }
 
 @media (max-width: 700px) {
