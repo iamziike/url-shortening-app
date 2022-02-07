@@ -12,19 +12,13 @@
 
 .bulb * {
   cursor: pointer;
-  height: 70%;
+  height: 26px;
   fill: var(--color-variant2);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1070px) {
   .bulb {
     justify-content: center;
     right: 0;
-  }
-
-  .bulb * {
-    cursor: pointer;
-    height: 100%;
-    fill: var(--color-variant2);
   }
 }
